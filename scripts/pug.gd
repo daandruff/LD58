@@ -48,6 +48,9 @@ func _physics_process(delta: float) -> void:
 			$AnimationPlayer.play('stick')
 			await get_tree().create_timer(.3).timeout
 			stick.pickup($Sprites/Snout/StickConnection)
+			$Sprites/Body/Stick.setType(stick.type)
+			$Sprites/Body/Stick.visible = true
+			$Sprites/Tounge.visible = false
 			hasStick = stick
 		elif (hasStick):
 			$AnimationPlayer.speed_scale = 1.5
@@ -55,6 +58,8 @@ func _physics_process(delta: float) -> void:
 			await get_tree().create_timer(.3).timeout
 			var dropPosition = Vector2(global_position.x + direction * -50, global_position.y)
 			hasStick.drop(dropPosition)
+			$Sprites/Body/Stick.visible = false
+			$Sprites/Tounge.visible = true
 			hasStick = null
 	else:
 		if movementActive:

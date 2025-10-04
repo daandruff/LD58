@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bc5lw4bl1pk63"]
+[gd_scene load_steps=6 format=3 uid="uid://bc5lw4bl1pk63"]
 
 [ext_resource type="Texture2D" uid="uid://bg18068h3bijr" path="res://gfx/sticks/stick_a_col.png" id="1_1d3ec"]
 [ext_resource type="Script" uid="uid://c1sshpenjn16a" path="res://scripts/stick.gd" id="1_lrv7v"]
 [ext_resource type="Texture2D" uid="uid://do2gi5ml41vm" path="res://gfx/sticks/stick_a_shade.png" id="2_lrv7v"]
+[ext_resource type="Texture2D" uid="uid://731jtlisbdut" path="res://gfx/sticks/fence_col.png" id="4_0l4pw"]
+[ext_resource type="Texture2D" uid="uid://cfwmd07whsja5" path="res://gfx/sticks/fence_shade.png" id="5_f6slq"]
 
 [node name="Stick" type="Node2D"]
 script = ExtResource("1_lrv7v")
@@ -19,3 +21,16 @@ texture = ExtResource("2_lrv7v")
 [node name="StickACol" type="Sprite2D" parent="StickA"]
 position = Vector2(4, 24)
 texture = ExtResource("1_1d3ec")
+
+[node name="Fence" type="Node2D" parent="."]
+visible = false
+
+[node name="FenceCol" type="Sprite2D" parent="Fence"]
+position = Vector2(6.800148, -7.806526)
+scale = Vector2(0.30333394, 0.30333394)
+texture = ExtResource("4_0l4pw")
+
+[node name="FenceShade" type="Sprite2D" parent="Fence"]
+position = Vector2(6.800148, -7.806526)
+scale = Vector2(0.30333394, 0.30333394)
+texture = ExtResource("5_f6slq")

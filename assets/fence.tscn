@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://hqokq2h3lpqf" path="res://gfx/fence.png" id="1_efp35"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ks6jm"]
-size = Vector2(376, 188.49998)
+size = Vector2(376, 86.00003)
 
 [node name="Fence" type="Node2D"]
 scale = Vector2(0.4, 0.4)
@@ -15,6 +15,6 @@ texture = ExtResource("1_efp35")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-13.999996, -85.74996)
-scale = Vector2(0.9999998, 0.9999998)
+position = Vector2(-13.999993, -34.499985)
+scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_ks6jm")
