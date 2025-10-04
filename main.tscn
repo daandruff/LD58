@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6dd3yagmchk6"]
+[gd_scene load_steps=8 format=3 uid="uid://c6dd3yagmchk6"]
 
 [ext_resource type="PackedScene" uid="uid://dg8r4k13jrxhw" path="res://assets/pug.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bc5lw4bl1pk63" path="res://assets/stick.tscn" id="2_0xm2m"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bk580r60vbwbh" path="res://gfx/clutter/rocks.png" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://dovhx55eh3pll" path="res://gfx/clutter/grass_a.png" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://jdepjbkjjlum" path="res://assets/fence_broken.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://d1ev7x85ql4th" path="res://assets/laura.tscn" id="7_272bh"]
 
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
@@ -15,7 +16,7 @@ position = Vector2(554, 322)
 scale = Vector2(0.3, 0.3)
 
 [node name="Camera2D" type="Camera2D" parent="Pug"]
-position = Vector2(-10.0000105, -173.3333)
+position = Vector2(93.33332, -173.3333)
 scale = Vector2(3.3333333, 3.3333333)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
@@ -84,6 +85,18 @@ position = Vector2(1073, 41)
 scale = Vector2(0.3551616, 0.3551616)
 texture = ExtResource("4_lquwl")
 
+[node name="Rocks6" type="Sprite2D" parent="Cluttre"]
+modulate = Color(1, 1, 1, 0.3137255)
+position = Vector2(701, -223)
+scale = Vector2(0.3551616, 0.3551616)
+texture = ExtResource("4_lquwl")
+
+[node name="Rocks7" type="Sprite2D" parent="Cluttre"]
+modulate = Color(1, 1, 1, 0.3137255)
+position = Vector2(66, -445)
+scale = Vector2(0.3551616, 0.3551616)
+texture = ExtResource("4_lquwl")
+
 [node name="Rocks5" type="Sprite2D" parent="Cluttre"]
 modulate = Color(1, 1, 1, 0.3137255)
 position = Vector2(-161, -6)
@@ -105,6 +118,24 @@ texture = ExtResource("5_7mycd")
 [node name="GrassA4" type="Sprite2D" parent="Cluttre"]
 modulate = Color(1, 1, 1, 0.3137255)
 position = Vector2(625.99994, 479)
+scale = Vector2(0.47859603, 0.47859603)
+texture = ExtResource("5_7mycd")
+
+[node name="GrassA9" type="Sprite2D" parent="Cluttre"]
+modulate = Color(1, 1, 1, 0.3137255)
+position = Vector2(720, -69.99994)
+scale = Vector2(0.47859603, 0.47859603)
+texture = ExtResource("5_7mycd")
+
+[node name="GrassA10" type="Sprite2D" parent="Cluttre"]
+modulate = Color(1, 1, 1, 0.3137255)
+position = Vector2(-216.99994, -274)
+scale = Vector2(0.47859603, 0.47859603)
+texture = ExtResource("5_7mycd")
+
+[node name="GrassA11" type="Sprite2D" parent="Cluttre"]
+modulate = Color(1, 1, 1, 0.3137255)
+position = Vector2(935.99994, -445)
 scale = Vector2(0.47859603, 0.47859603)
 texture = ExtResource("5_7mycd")
 
@@ -143,3 +174,7 @@ position = Vector2(705, 454)
 
 [node name="Fence4" parent="." instance=ExtResource("6_7mycd")]
 position = Vector2(-20.999939, 452)
+
+[node name="Laura" parent="." instance=ExtResource("7_272bh")]
+position = Vector2(351, -134)
+scale = Vector2(0.3, 0.3)
