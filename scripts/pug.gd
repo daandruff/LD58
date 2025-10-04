@@ -6,7 +6,7 @@ var hasStick : Node2D = null
 
 @export var speed : int = 400
 @export var barkDelay : int = 500
-@export var pickupDistance : int = 100
+@export var pickupDistance : int = 75
 
 func _ready() -> void:
 	pass
@@ -40,16 +40,18 @@ func _process(delta: float) -> void:
 			$AnimationPlayer.play('bark')
 			$AnimationPlayer.queue("idle")
 		elif (stick and not hasStick):
-			stick.pickup($Sprites/Snout/StickConnection)
-			hasStick = stick
 			$AnimationPlayer.speed_scale = 1.5
 			$AnimationPlayer.play('stick')
+			await get_tree().create_timer(.3).timeout
+			stick.pickup($Sprites/Snout/StickConnection)
+			hasStick = stick
 		elif (hasStick):
+			$AnimationPlayer.speed_scale = 1.5
+			$AnimationPlayer.play('stick')
+			await get_tree().create_timer(.3).timeout
 			var dropPosition = Vector2(global_position.x + direction * -50, global_position.y)
 			hasStick.drop(dropPosition)
 			hasStick = null
-			$AnimationPlayer.speed_scale = 1.5
-			$AnimationPlayer.play('stick')
 	else:
 		if movementActive:
 			$AnimationPlayer.speed_scale = 2

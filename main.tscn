@@ -15,3 +15,9 @@ position = Vector2(212, 394)
 
 [node name="Stick2" parent="." instance=ExtResource("2_0xm2m")]
 position = Vector2(860, 230)
+
+[node name="Stick3" parent="." instance=ExtResource("2_0xm2m")]
+position = Vector2(730, 534)
+
+[node name="Stick4" parent="." instance=ExtResource("2_0xm2m")]
+position = Vector2(360, 122)

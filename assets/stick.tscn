@@ -11,10 +11,11 @@ script = ExtResource("1_lrv7v")
 z_as_relative = false
 scale = Vector2(0.2, 0.2)
 
+[node name="StickAShade" type="Sprite2D" parent="StickA"]
+position = Vector2(5, 20)
+scale = Vector2(1.2182888, 1.3039305)
+texture = ExtResource("2_lrv7v")
+
 [node name="StickACol" type="Sprite2D" parent="StickA"]
 position = Vector2(4, 24)
 texture = ExtResource("1_1d3ec")
-
-[node name="StickAShade" type="Sprite2D" parent="StickA"]
-position = Vector2(4, 24)
-texture = ExtResource("2_lrv7v")
