@@ -10,6 +10,12 @@ y_sort_enabled = true
 position = Vector2(554, 322)
 scale = Vector2(0.3, 0.3)
 
+[node name="Camera2D" type="Camera2D" parent="Pug"]
+position = Vector2(-400, -186.66663)
+scale = Vector2(3.3333333, 3.3333333)
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
+
 [node name="Stick" parent="." instance=ExtResource("2_0xm2m")]
 position = Vector2(212, 394)
 

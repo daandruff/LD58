@@ -15,6 +15,11 @@ run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/mode=3
+window/stretch/mode="viewport"
+
 [dotnet]
 
 project/assembly_name="LD58"
@@ -49,4 +54,5 @@ interact={
 
 [rendering]
 
+anti_aliasing/quality/msaa_2d=2
 environment/defaults/default_clear_color=Color(0.8784314, 0.77254903, 0.3137255, 1)
