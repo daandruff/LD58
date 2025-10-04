@@ -13,9 +13,9 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	var movementActive = false
-	var bark = false
 	
-	print($AnimationPlayer.current_animation)
+	if ($AnimationPlayer.current_animation == 'bark'): return
+	if ($AnimationPlayer.current_animation == 'stick'): return
 	
 	if Input.is_action_pressed("left") and isBarking <= 0:
 		position.x -= speed * delta
@@ -36,24 +36,20 @@ func _process(delta: float) -> void:
 		var stick = pickupStick()
 		
 		if (not stick and not hasStick):
-			bark = true
-			isBarking = barkDelay
+			$AnimationPlayer.speed_scale = 1.5
+			$AnimationPlayer.play('bark')
+			$AnimationPlayer.queue("idle")
 		elif (stick and not hasStick):
 			stick.pickup($Sprites/Snout/StickConnection)
 			hasStick = stick
 			$AnimationPlayer.speed_scale = 1.5
 			$AnimationPlayer.play('stick')
 		elif (hasStick):
-			hasStick.drop(global_position)
+			var dropPosition = Vector2(global_position.x + direction * -50, global_position.y)
+			hasStick.drop(dropPosition)
 			hasStick = null
 			$AnimationPlayer.speed_scale = 1.5
 			$AnimationPlayer.play('stick')
-	
-	if bark:
-		$AnimationPlayer.speed_scale = 1.5
-		$AnimationPlayer.play('bark')
-	elif isBarking > 0:
-		isBarking -= delta * 1000
 	else:
 		if movementActive:
 			$AnimationPlayer.speed_scale = 2
@@ -61,7 +57,7 @@ func _process(delta: float) -> void:
 		else:
 			$AnimationPlayer.speed_scale = 1.5
 			$AnimationPlayer.play('idle')
-		
+			
 	scale.x = abs(scale.x) * direction
 
 

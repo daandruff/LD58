@@ -23,5 +23,5 @@ func drop(parentPosition) -> void:
 	parent = null
 	$StickA.z_index = 0
 	$StickA.z_as_relative = true
-	position = position
+	position = parentPosition
 	rotation = 0
