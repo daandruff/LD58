@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dg8r4k13jrxhw"]
+[gd_scene load_steps=20 format=3 uid="uid://dg8r4k13jrxhw"]
 
 [ext_resource type="Texture2D" uid="uid://da7h6kj2h0h13" path="res://gfx/pug/shadow.png" id="1_4xfvy"]
 [ext_resource type="Texture2D" uid="uid://pahsmeww853y" path="res://gfx/pug/leg_rb.png" id="1_hl5qe"]
@@ -1443,7 +1443,10 @@ _data = {
 &"stick": SubResource("Animation_mnpuw")
 }
 
-[node name="Pug" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yntqs"]
+size = Vector2(280, 188)
+
+[node name="Pug" type="CharacterBody2D"]
 script = ExtResource("1_yntqs")
 
 [node name="Sprites" type="Node2D" parent="."]
@@ -1509,3 +1512,7 @@ libraries = {
 autoplay = "idle"
 playback_default_blend_time = 1.0
 speed_scale = 1.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -94)
+shape = SubResource("RectangleShape2D_yntqs")

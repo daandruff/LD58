@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6dd3yagmchk6"]
+[gd_scene load_steps=4 format=3 uid="uid://c6dd3yagmchk6"]
 
 [ext_resource type="PackedScene" uid="uid://dg8r4k13jrxhw" path="res://assets/pug.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bc5lw4bl1pk63" path="res://assets/stick.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cri0i4t7t8nl8" path="res://assets/fence.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
@@ -27,3 +28,9 @@ position = Vector2(730, 534)
 
 [node name="Stick4" parent="." instance=ExtResource("2_0xm2m")]
 position = Vector2(360, 122)
+
+[node name="Fence" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(143, 452)
+
+[node name="Fence2" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(543, 452)

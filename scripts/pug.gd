@@ -1,4 +1,4 @@
-extends Node2D
+extends CharacterBody2D
 
 var direction : int = 1
 var isBarking : float = 0
@@ -11,27 +11,31 @@ var hasStick : Node2D = null
 func _ready() -> void:
 	pass
 	
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var movementActive = false
+	velocity.x = 0
+	velocity.y = 0
 	
 	if ($AnimationPlayer.current_animation == 'bark'): return
 	if ($AnimationPlayer.current_animation == 'stick'): return
 	
 	if Input.is_action_pressed("left") and isBarking <= 0:
-		position.x -= speed * delta
+		velocity.x = -speed
+		$Sprites.scale.x = 1
 		direction = 1
 		movementActive = true
 	if Input.is_action_pressed("right") and isBarking <= 0:
-		position.x += speed * delta
+		velocity.x = speed
+		$Sprites.scale.x = -1
 		direction = -1
 		movementActive = true
 	if Input.is_action_pressed("up") and isBarking <= 0:
-		position.y -= (speed / 1.5) * delta
+		velocity.y = -(speed / 1.5)
 		movementActive = true
 	if Input.is_action_pressed("down") and isBarking <= 0:
-		position.y += (speed / 1.5) * delta
+		velocity.y = (speed / 1.5)
 		movementActive = true
-		
+	
 	if Input.is_action_just_pressed("interact") and isBarking <= 0:
 		var stick = pickupStick()
 		
@@ -59,8 +63,11 @@ func _process(delta: float) -> void:
 		else:
 			$AnimationPlayer.speed_scale = 1.5
 			$AnimationPlayer.play('idle')
-			
-	scale.x = abs(scale.x) * direction
+		
+	move_and_slide()
+	
+func _process(delta: float) -> void:
+	pass
 
 
 func pickupStick():
