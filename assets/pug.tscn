@@ -1477,8 +1477,8 @@ texture = ExtResource("4_yntqs")
 
 [node name="Stick" parent="Sprites/Body" instance=ExtResource("13_41vvc")]
 visible = false
-position = Vector2(-164.70076, 50)
-rotation = 0.31767577
+position = Vector2(-159, 40)
+rotation = -0.14627436
 scale = Vector2(3.6464415, 3.5729249)
 skew = -0.0010823011
 

@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://bc5lw4bl1pk63"]
+[gd_scene load_steps=10 format=3 uid="uid://bc5lw4bl1pk63"]
 
 [ext_resource type="Texture2D" uid="uid://bg18068h3bijr" path="res://gfx/sticks/stick_a_col.png" id="1_1d3ec"]
 [ext_resource type="Script" uid="uid://c1sshpenjn16a" path="res://scripts/stick.gd" id="1_lrv7v"]
 [ext_resource type="Texture2D" uid="uid://do2gi5ml41vm" path="res://gfx/sticks/stick_a_shade.png" id="2_lrv7v"]
 [ext_resource type="Texture2D" uid="uid://731jtlisbdut" path="res://gfx/sticks/fence_col.png" id="4_0l4pw"]
 [ext_resource type="Texture2D" uid="uid://cfwmd07whsja5" path="res://gfx/sticks/fence_shade.png" id="5_f6slq"]
+[ext_resource type="Texture2D" uid="uid://dscyp41ll3g22" path="res://gfx/sticks/stick_c_col.png" id="6_lf1yq"]
+[ext_resource type="Texture2D" uid="uid://d1j4k3ous532n" path="res://gfx/sticks/stick_b_col.png" id="6_ugapc"]
+[ext_resource type="Texture2D" uid="uid://ccvfwavu7q36x" path="res://gfx/sticks/stick_c_shade.png" id="7_mlbe7"]
+[ext_resource type="Texture2D" uid="uid://cw4uyqmkouk5q" path="res://gfx/sticks/stick_b_shade.png" id="7_n2vk2"]
 
 [node name="Stick" type="Node2D"]
 script = ExtResource("1_lrv7v")
@@ -21,6 +25,32 @@ texture = ExtResource("2_lrv7v")
 [node name="StickACol" type="Sprite2D" parent="StickA"]
 position = Vector2(4, 24)
 texture = ExtResource("1_1d3ec")
+
+[node name="StickB" type="Node2D" parent="."]
+visible = false
+
+[node name="StickBCol" type="Sprite2D" parent="StickB"]
+position = Vector2(3.2277293, -3.1991615)
+scale = Vector2(0.21344888, 0.21344888)
+texture = ExtResource("6_ugapc")
+
+[node name="StickBShade" type="Sprite2D" parent="StickB"]
+position = Vector2(3.2277293, -3.1991615)
+scale = Vector2(0.21344888, 0.21344888)
+texture = ExtResource("7_n2vk2")
+
+[node name="StickC" type="Node2D" parent="."]
+visible = false
+
+[node name="StickCCol" type="Sprite2D" parent="StickC"]
+position = Vector2(0.663414, 3.2412186)
+scale = Vector2(0.2179316, 0.2179316)
+texture = ExtResource("6_lf1yq")
+
+[node name="StickCShade" type="Sprite2D" parent="StickC"]
+position = Vector2(0.663414, 3.2412186)
+scale = Vector2(0.2179316, 0.2179316)
+texture = ExtResource("7_mlbe7")
 
 [node name="Fence" type="Node2D" parent="."]
 visible = false

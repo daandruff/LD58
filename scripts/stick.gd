@@ -1,6 +1,6 @@
 extends Node2D
 
-@export_enum('Twig', 'Fence') var type : String = 'Twig'
+@export_enum('Twig', 'Twig B', 'Twig C', 'Fence') var type : String = 'Twig'
 
 var handle : Node2D = null
 var shadow : Sprite2D = null
@@ -24,6 +24,12 @@ func setType(newType) -> void:
 		'Twig':
 			handle = $StickA
 			shadow = $StickA/StickAShade
+		'Twig B':
+			handle = $StickB
+			shadow = $StickB/StickBShade
+		'Twig C':
+			handle = $StickC
+			shadow = $StickC/StickCShade
 		'Fence':
 			handle = $Fence
 			shadow = $Fence/FenceShade
@@ -33,15 +39,15 @@ func setType(newType) -> void:
 	handle.visible = true
 
 func pickup(newParent) -> Node2D:
-	$StickA/StickAShade.visible = false
 	parent = newParent
 	visible = false
 	return self
 
 func drop(parentPosition) -> void:
-	$StickA/StickAShade.visible = true
 	parent = null
 	position = parentPosition
 	rotation = 0
 	visible = true
-	
+
+func setShadow(state) -> void:
+	shadow.visible = state

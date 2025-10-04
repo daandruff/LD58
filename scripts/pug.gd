@@ -49,6 +49,7 @@ func _physics_process(delta: float) -> void:
 			await get_tree().create_timer(.3).timeout
 			stick.pickup($Sprites/Snout/StickConnection)
 			$Sprites/Body/Stick.setType(stick.type)
+			$Sprites/Body/Stick.setShadow(false)
 			$Sprites/Body/Stick.visible = true
 			$Sprites/Tounge.visible = false
 			hasStick = stick

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6dd3yagmchk6"]
+[gd_scene load_steps=7 format=3 uid="uid://c6dd3yagmchk6"]
 
 [ext_resource type="PackedScene" uid="uid://dg8r4k13jrxhw" path="res://assets/pug.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bc5lw4bl1pk63" path="res://assets/stick.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://cri0i4t7t8nl8" path="res://assets/fence.tscn" id="3_h2yge"]
 [ext_resource type="Texture2D" uid="uid://bk580r60vbwbh" path="res://gfx/clutter/rocks.png" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://dovhx55eh3pll" path="res://gfx/clutter/grass_a.png" id="5_7mycd"]
+[ext_resource type="PackedScene" uid="uid://jdepjbkjjlum" path="res://assets/fence_broken.tscn" id="6_7mycd"]
 
 [node name="Main" type="Node2D"]
 y_sort_enabled = true
@@ -20,29 +21,42 @@ position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 
 [node name="Stick" parent="." instance=ExtResource("2_0xm2m")]
-position = Vector2(212, 394)
+position = Vector2(181, 525)
 
 [node name="Stick2" parent="." instance=ExtResource("2_0xm2m")]
 position = Vector2(860, 230)
+type = "Twig B"
 
 [node name="Stick3" parent="." instance=ExtResource("2_0xm2m")]
-position = Vector2(787, 427)
+position = Vector2(771, 436)
 type = "Fence"
 
 [node name="Stick4" parent="." instance=ExtResource("2_0xm2m")]
 position = Vector2(360, 122)
+type = "Twig C"
+
+[node name="Stick5" parent="." instance=ExtResource("2_0xm2m")]
+position = Vector2(-375, 265)
+
+[node name="Stick6" parent="." instance=ExtResource("2_0xm2m")]
+position = Vector2(783, 691)
+type = "Twig B"
+
+[node name="Stick7" parent="." instance=ExtResource("2_0xm2m")]
+position = Vector2(-105, 717)
+type = "Twig C"
 
 [node name="Fence" parent="." instance=ExtResource("3_h2yge")]
 position = Vector2(142.00002, 452)
 rotation = 0.025899917
 
+[node name="Fence5" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(-180.99995, 450.99997)
+rotation = 0.025899917
+
 [node name="Fence2" parent="." instance=ExtResource("3_h2yge")]
 position = Vector2(541, 453)
 rotation = 0.028245183
-
-[node name="Fence3" parent="." instance=ExtResource("3_h2yge")]
-position = Vector2(712.99994, 449.00003)
-rotation = -0.052449107
 
 [node name="Cluttre" type="Node2D" parent="."]
 
@@ -123,3 +137,9 @@ modulate = Color(1, 1, 1, 0.3137255)
 position = Vector2(813, 142.00002)
 scale = Vector2(0.47859603, 0.47859603)
 texture = ExtResource("5_7mycd")
+
+[node name="Fence3" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(705, 454)
+
+[node name="Fence4" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(-20.999939, 452)

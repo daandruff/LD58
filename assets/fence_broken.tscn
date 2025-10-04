@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://jdepjbkjjlum"]
+
+[ext_resource type="Texture2D" uid="uid://co5unqmmg35ob" path="res://gfx/fence_broken.png" id="1_r63jl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ks6jm"]
+size = Vector2(376, 86.00003)
+
+[node name="Fence" type="Node2D"]
+scale = Vector2(0.4, 0.4)
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(-6, -155)
+texture = ExtResource("1_r63jl")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-13.999993, -34.499985)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_ks6jm")
