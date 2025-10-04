@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6dd3yagmchk6"]
+
+[ext_resource type="PackedScene" uid="uid://dg8r4k13jrxhw" path="res://assets/pug.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bc5lw4bl1pk63" path="res://assets/stick.tscn" id="2_0xm2m"]
+
+[node name="Main" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Pug" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(554, 322)
+scale = Vector2(0.3, 0.3)
+
+[node name="Stick" parent="." instance=ExtResource("2_0xm2m")]
+position = Vector2(212, 394)
+
+[node name="Stick2" parent="." instance=ExtResource("2_0xm2m")]
+position = Vector2(860, 230)
