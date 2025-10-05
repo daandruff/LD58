@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bc5lw4bl1pk63"]
+[gd_scene load_steps=11 format=3 uid="uid://bc5lw4bl1pk63"]
 
 [ext_resource type="Texture2D" uid="uid://bg18068h3bijr" path="res://gfx/sticks/stick_a_col.png" id="1_1d3ec"]
 [ext_resource type="Script" uid="uid://c1sshpenjn16a" path="res://scripts/stick.gd" id="1_lrv7v"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://d1j4k3ous532n" path="res://gfx/sticks/stick_b_col.png" id="6_ugapc"]
 [ext_resource type="Texture2D" uid="uid://ccvfwavu7q36x" path="res://gfx/sticks/stick_c_shade.png" id="7_mlbe7"]
 [ext_resource type="Texture2D" uid="uid://cw4uyqmkouk5q" path="res://gfx/sticks/stick_b_shade.png" id="7_n2vk2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lf1yq"]
+radius = 25.019993
 
 [node name="Stick" type="Node2D"]
 script = ExtResource("1_lrv7v")
@@ -64,3 +67,8 @@ texture = ExtResource("4_0l4pw")
 position = Vector2(6.800148, -7.806526)
 scale = Vector2(0.30333394, 0.30333394)
 texture = ExtResource("5_f6slq")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_lf1yq")

@@ -1,6 +1,8 @@
 extends Node2D
 
 @export_enum('Twig', 'Twig B', 'Twig C', 'Fence') var type : String = 'Twig'
+@export var countType : int = 0
+@export var countable = true
 
 var handle : Node2D = null
 var shadow : Sprite2D = null
@@ -10,7 +12,8 @@ func _ready() -> void:
 	setType(false)
 	
 func _process(delta: float) -> void:
-	pass
+	if (parent):
+		position = parent.global_position
 
 func setType(newType) -> void:
 	if newType: type = newType
@@ -24,15 +27,19 @@ func setType(newType) -> void:
 		'Twig':
 			handle = $StickA
 			shadow = $StickA/StickAShade
+			countType = 0
 		'Twig B':
 			handle = $StickB
 			shadow = $StickB/StickBShade
+			countType = 0
 		'Twig C':
 			handle = $StickC
 			shadow = $StickC/StickCShade
+			countType = 0
 		'Fence':
 			handle = $Fence
 			shadow = $Fence/FenceShade
+			countType = 1
 		_:
 			pass
 	

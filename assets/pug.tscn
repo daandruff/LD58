@@ -1481,6 +1481,7 @@ position = Vector2(-159, 40)
 rotation = -0.14627436
 scale = Vector2(3.6464415, 3.5729249)
 skew = -0.0010823011
+countable = false
 
 [node name="Eyes" type="Sprite2D" parent="Sprites"]
 position = Vector2(1, 13)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c6dd3yagmchk6"]
+[gd_scene load_steps=9 format=3 uid="uid://c6dd3yagmchk6"]
 
 [ext_resource type="PackedScene" uid="uid://dg8r4k13jrxhw" path="res://assets/pug.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bc5lw4bl1pk63" path="res://assets/stick.tscn" id="2_0xm2m"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bk580r60vbwbh" path="res://gfx/clutter/rocks.png" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://dovhx55eh3pll" path="res://gfx/clutter/grass_a.png" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://jdepjbkjjlum" path="res://assets/fence_broken.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://cj6vk17rwlxmx" path="res://assets/carpet.tscn" id="7_5vw27"]
 [ext_resource type="PackedScene" uid="uid://d1ev7x85ql4th" path="res://assets/laura.tscn" id="7_272bh"]
 
 [node name="Main" type="Node2D"]
@@ -174,6 +175,10 @@ position = Vector2(705, 454)
 
 [node name="Fence4" parent="." instance=ExtResource("6_7mycd")]
 position = Vector2(-20.999939, 452)
+
+[node name="Carpet" parent="." instance=ExtResource("7_5vw27")]
+z_index = -1
+position = Vector2(352, -73)
 
 [node name="Laura" parent="." instance=ExtResource("7_272bh")]
 position = Vector2(351, -134)
